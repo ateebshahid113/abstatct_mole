@@ -6,9 +6,8 @@ class SchoolStudent(models.Model):
     _description = 'School Student'
 
     age = fields.Integer(string='Age')
+    grade = fields.Char(string='Grade')
     room_id = fields.Many2one('school.room', string='Room')
-
-
 
     def get_student_info(self):
         """Get formatted student information"""
