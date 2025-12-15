@@ -8,7 +8,9 @@ class SchoolStudent(models.Model):
     age = fields.Integer(string='Age')
     grade = fields.Char(string='Grade')
     room_id = fields.Many2one('school.room', string='Room')
-    
+
+
+
     def get_student_info(self):
         """Get formatted student information"""
         info = self.get_full_contact()
@@ -17,7 +19,9 @@ class SchoolStudent(models.Model):
         if self.grade:
             info += f" | Grade: {self.grade}"
         return info
-    
+
+
+
     @api.model
     def get_students_by_grade(self, grade):
         """Get all students in a specific grade"""
