@@ -10,6 +10,7 @@
         'views/school_teacher_views.xml',
         'views/school_room_views.xml',
         'views/menu_views.xml',
+        'wizard/student_teacher_wizard_view.xml',
     ],
     'installable': True,
     'application': True,
