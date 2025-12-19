@@ -1,0 +1,72 @@
+# ========================
+# Python cache & compiled files
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================
+# Virtual environments
+# ========================
+env/
+venv/
+.venv/
+ENV/
+.ENV/
+
+# ========================
+# Odoo specific
+# ========================
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.sql
+*.zip
+*.tar.gz
+
+# Odoo filestore & sessions
+filestore/
+sessions/
+
+# PyCharm / VSCode / IDE settings
+.vscode/
+.idea/
+*.iml
+
+# ========================
+# OS specific junk
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Node / Frontend (if using JS/CSS builds)
+# ========================
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# ========================
+# Coverage / test files
+# ========================
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+pytest_cache/
+
+# ========================
+# Addons auto-ignores
+# ========================
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# ========================
+# Misc
+# ========================
+*.swp
+*.swo
