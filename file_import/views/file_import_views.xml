@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_file_import_form" model="ir.ui.view">
+        <field name="name">file.import.form</field>
+        <field name="model">file.import</field>
+        <field name="arch" type="xml">
+            <form string="File Import">
+                <group>
+                    <field name="file_data" filename="file_name"/>
+                    <field name="file_name" invisible="1"/>
+                    <field name="file_type"/>
+                </group>
+                <footer>
+                    <button name="process_file" string="Import" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_file_import" model="ir.actions.act_window">
+        <field name="name">File Import</field>
+        <field name="res_model">file.import</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_file_import" name="File Import" action="action_file_import" parent="mrp.menu_mrp_bom"/>
+</odoo>

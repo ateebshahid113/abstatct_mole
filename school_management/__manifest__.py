@@ -1,11 +1,13 @@
 {
-    'name': 'School Management',
+    'name': 'School Management System',
     'version': '18.0.1.0.0',
     'category': 'Education',
     'summary': 'Manage students, teachers and rooms',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
+        'security/module_category.xml',
+        'security/group.xml',
         'views/school_student_views.xml',
         'views/school_teacher_views.xml',
         'views/school_room_views.xml',
