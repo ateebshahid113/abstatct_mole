@@ -1,11 +1,15 @@
 from odoo import models, fields, api
 
+
 class SchoolStudent(models.Model):
     _name = 'school.student'
     _inherit = 'school.person.abstract'
     _description = 'School Student'
 
-    age = fields.Integer(string='Age')
+    age = fields.Integer(
+        string='Age',
+        groups='school_management.group_library_user'
+    )
     grade = fields.Char(string='Grade')
     room_id = fields.Many2one('school.room', string='Room')
 
@@ -17,8 +21,6 @@ class SchoolStudent(models.Model):
         if self.grade:
             info += f" | Grade: {self.grade}"
         return info
-
-
 
     @api.model
     def get_students_by_grade(self, grade):

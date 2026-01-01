@@ -3,3 +3,6 @@ access_school_student,access_school_student,model_school_student,base.group_user
 access_school_teacher,access_school_teacher,model_school_teacher,base.group_user,1,1,1,1
 access_school_room,access_school_room,model_school_room,base.group_user,1,1,1,1
 access_student_teacher_wizard,access_student_teacher_wizard,model_student_teacher_wizard,base.group_user,1,1,1,1
+
+access_school_student_user,school.student user,model_school_student,group_library_user,1,0,0,0
+access_school_student_librarian,school.student librarian,model_school_student,group_library_librarian,1,1,1,1

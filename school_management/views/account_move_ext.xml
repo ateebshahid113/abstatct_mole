@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_in_invoice_tree_partner_role" model="ir.ui.view">
+        <field name="name">account.move.in.invoice.tree.partner.role</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_in_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field name="partner_role"
+                       widget="badge"
+                       decoration-info="partner_role == 'vendor'"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_in_invoice_tree_partner_role" model="ir.ui.view">
+        <field name="name">account.move.in.invoice.tree.partner.role</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_out_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <field name="partner_role"
+                       widget="badge"
+                       decoration-info="partner_role == 'customer'"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

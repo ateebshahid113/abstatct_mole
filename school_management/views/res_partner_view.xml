@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_partner_type" model="ir.ui.view">
+        <field name="name">res.partner.form.partner.type</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Radio Button -->
+            <xpath expr="//group" position="inside">
+                <field name="partner_type" widget="radio"/>
+            </xpath>
+
+            <!-- CUSTOMER TAB -->
+            <xpath expr="//page[@name='sales_purchases']" position="before">
+                <page string="Customer"
+                      invisible="customer_rank == 0">
+
+                    <group>
+                        <field name="property_account_receivable_id"/>
+                        <field name="credit_limit"/>
+                    </group>
+
+                </page>
+            </xpath>
+
+            <!-- VENDOR TAB -->
+            <xpath expr="//page[@name='sales_purchases']" position="after">
+                <page string="Vendor"
+                      invisible="supplier_rank == 0">
+
+                    <group>
+                        <field name="property_account_payable_id"/>
+                        <field name="bank_ids"/>
+                    </group>
+
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
